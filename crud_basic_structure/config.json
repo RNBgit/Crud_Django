@@ -1,0 +1,26 @@
+{
+    "DEFAULT_DB_NAME": "CrudbasicStructure",
+    "DEFAULT_DB_HOST": "localhost",
+    "DEFAULT_DB_PORT": "3306",
+    "DEFAULT_DB_USER": "OJT01",
+    "DEFAULT_DB_PASS": "qwerty",
+
+
+    "TRANSACTION_DB_NAME": "",
+    "TRANSACTION_DB_HOST": "",
+    "TRANSACTION_PORT": "",
+    "TRANSACTION_USER": "",
+    "TRANSACTION_PASS": "",
+
+    "DEBUG_MODE" : "True",
+
+    "DB_PREFIX" : "Q!W2",
+    "DOMAIN_HOST" : "localhost",
+    "DOMAIN_IP" : "127.0.0.1",
+
+    "SYSYEM_CODE" : ""
+
+   
+
+
+}
