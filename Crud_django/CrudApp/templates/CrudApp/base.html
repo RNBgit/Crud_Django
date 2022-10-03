@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <head>
+        <title>TASK 4</title>
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/exer4.sdjs' %}"></script>
+
+    </head>
+    
+<style>
+
+
+
+
+.fld1{
+    width: 20px;
+    height: 500px;
+    background-color: #42f590;
+    float: left;
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 50px;
+    
+}
+
+.centr input{
+    margin-top: 30px;
+   
+
+}
+
+.centr{
+    text-align: center;
+}
+.addr_input{
+    height: 100px;
+    margin-left: 16px;
+    
+}
+.btnsave , .update{
+    margin-left: 230px;
+    margin-top: 50px;
+    width: 100px;
+}
+
+
+.fld2{
+    width: 65%;
+    height: 500px;
+    background-color: #42f590;
+    float: right;
+    margin-right: 30px;
+    margin-top: 50px;
+    
+}
+td, th{
+    text-align: center;
+    width: 10px;
+}
+#btndelete{
+    background-color: red;
+    color: white;
+    width: 60px;
+}
+#btnsave , #update{
+    
+    background-color: blue;
+    color: white;
+}
+#btnedit{
+    background-color: skyblue;
+    width: 50px;
+    margin: auto;
+    color: white;
+}
+#btn_update{
+    background-color: green;
+    color: white;
+    width: 60px;
+}
+body{
+    background-color: #42f5c2;
+}
+.table2{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+input{
+    width: 150px;
+}
+
+</style>
+
+    <body>
+          {% block content %}
+          {% endblock%}
+    </body>
+</html>

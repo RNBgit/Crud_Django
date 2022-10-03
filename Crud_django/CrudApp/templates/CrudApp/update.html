@@ -1,0 +1,55 @@
+{% extends 'CrudApp/base.html' %}
+<html>
+<body>
+{% block content %}
+</table>
+    <fieldset class="fld1">
+        <form  action="updaterecord/{{infos.id}}" method="post">
+            {% csrf_token %}
+            <div class="centr">
+                <label for="input">First Name:</label>
+                <input type="text" value="{{ infos.firstname }}"  id="fname"  name="fname"  required="">
+                <br><br>
+                <label for="input" >Last Name:</label>
+                <input type="text" value="{{ infos.lastname }}" id="lname"  name="lname" required="">
+                <br><br>
+                <label  for="address">Address:</label>
+                <input id="address" value="{{ infos.address }}" type="text" name="address" required=""><br>
+
+                <label for="age">Age:</label>
+                <input id="age" value="{{ infos.age }}" style="margin-left: 40px;" type="text" id="age" name="age" required=""><br>
+
+                <label for="bday">Birthday:</label>
+                <input type="date" value="{{ infos.Birthday }}" id="bday" placeholder="Birthdate" style="width: 150px;" name="bdate" required="">           
+            </div>
+            <input id="btnsave" type="submit" class="btnsave" value="SAVE">
+        </form> 
+    </fieldset>
+    
+
+    <fieldset class="fld2">
+        <table class="table2" style="width: 80% ">
+            <tr class="w3-red w3-sans-serif w3-hover-teal">
+                <th>No.</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Age</th>
+                <th>Birthday</th>
+                <th >Action</th>
+            </tr>
+            {% for x in info %}
+            <tr>
+                <td>{{ x.id }}</td>
+                <td>{{ x.firstname }} {{ x.lastname }}</td>
+                <td>{{ x.address }}</td>
+                <td>{{ x.age }}</td>
+                <td>{{ x.Birthday }}</td>
+                <td><a href="update/{{x.id}}"><button type="button" id="btnedit">Edit</button></a>
+                    <a href="delete/{{x.id}}"><button type="button" id="btndelete">Delete</button></a></td>
+            </tr>
+            {% endfor %}      
+        </table>
+    </fieldset>
+{% endblock%}  
+</body>
+</html>
