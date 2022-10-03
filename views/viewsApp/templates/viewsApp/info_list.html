@@ -1,0 +1,33 @@
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    </style>
+
+<table>
+<tr>
+    <th>ID</th>
+    <th>TITLE</th>
+    <th>DESCRIPTION</th>
+    <th>ACTION</th>
+</tr>
+{% for info in object_list %}
+<tr>
+    <td>{{ info.id }}</td>
+    <td>{{ info.title }}</td>
+    <td>{{ info.description }}</td>
+    <td><a href="{% url 'view-detail' info.id %}">View</a>
+    
+    <a href="{% url 'update' info.id %}">Edit</a>
+
+    <a href="{% url 'delete' info.id %}">Delete</a></td>
+</tr>
+
+
+
+{% empty %}
+    <li>No objects yet.</li>
+{% endfor %}
+</table>
+<a href="{% url 'view-create' %}">Add</a>
